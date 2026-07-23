@@ -9,20 +9,17 @@ Analysis of how Bitcoin Fear/Greed sentiment relates to trader behavior and perf
 .
 ├── README.md
 ├── WRITEUP.md                          # 1-page summary: methodology, insights, strategy
-├── notebooks/
-│   └── trader_sentiment_analysis.ipynb # Main analysis notebook (pre-run, outputs included)
+├── trader_sentiment_analysis.ipynb     # Main analysis notebook (pre-run, outputs included)
 ├── 01_data_prep.py                     # Part A — cleaning, merge, metrics (script version)
 ├── 02_analysis.py                      # Part B — Fear vs Greed analysis + segments (script version)
 ├── 03_bonus_model.py                   # Bonus — predictive model
-├── data/
-│   ├── daily_account_sentiment.csv     # Cleaned, aggregated daily account-level table
-│   └── account_segments.csv            # Per-account segment labels
-└── charts/
-    ├── 01_performance_fear_vs_greed.png
-    ├── 02_behavior_fear_vs_greed.png
-    ├── 03_segment_pnl_by_sentiment.png
-    ├── 04_full_spectrum_pnl.png
-    └── 05_model_feature_importance.png
+├── daily_account_sentiment.csv         # Cleaned, aggregated daily account-level table
+├── account_segments.csv                # Per-account segment labels
+├── 01_performance_fear_vs_greed.png
+├── 02_behavior_fear_vs_greed.png
+├── 03_segment_pnl_by_sentiment.png
+├── 04_full_spectrum_pnl.png
+└── 05_model_feature_importance.png
 ```
 
 ## Setup
@@ -42,14 +39,14 @@ Place the two source files (not included in this repo — see Data Sources below
 
 **Option 1 — Notebook (recommended, already contains outputs/charts):**
 ```bash
-jupyter notebook notebooks/trader_sentiment_analysis.ipynb
+jupyter notebook trader_sentiment_analysis.ipynb
 ```
 
 **Option 2 — Scripts, in order:**
 ```bash
-python 01_data_prep.py      # writes data/daily_account_sentiment.csv
-python 02_analysis.py       # writes charts/01-04 + data/account_segments.csv
-python 03_bonus_model.py    # writes charts/05, prints model metrics
+python 01_data_prep.py      # writes daily_account_sentiment.csv
+python 02_analysis.py       # writes charts 01-04 + account_segments.csv
+python 03_bonus_model.py    # writes chart 05, prints model metrics
 ```
 
 ## Data Sources
